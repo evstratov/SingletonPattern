@@ -36,6 +36,11 @@ namespace SingletonPattern
             var connection2 = DBConnect.GetInstance();
             connection2.ExecSQL("insert into table2 \nselect * \nfrom table1");
 
+            Console.WriteLine();
+
+            var connection3 = DBConnect.GetInstance();
+            connection3.ExecSQL("select * \nfrom table3");
+
             Console.Read();
         }
     }
